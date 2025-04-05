@@ -13,7 +13,7 @@
             "ftp_user": "Kopri",
             "ftp_password": "KopriW5500",
             "download_folder": "./Saved_Data_KOA",
-            "start_time": "2025-04-04 04:15:49",
+            "start_time": "2025-04-05 00:51:40",
             "retry_delay": 300,
             "buffer_size": 1024,
             "file_duration": 2,
