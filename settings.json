@@ -1,0 +1,26 @@
+{
+    "logger": {
+        "folder": "./log",
+        "filename": "KOPRI_ADXL_FTP.log",
+        "consol": true,
+        "level": "DEBUG"
+    },
+    "name": "KOPRI ADXL FTP SETTINGS",
+    "version": "20240507",
+    "devices": [
+        {
+            "ftp_host": "192.168.0.200",
+            "ftp_user": "Kopri",
+            "ftp_password": "KopriW5500",
+            "download_folder": "./Saved_Data_KOA",
+            "start_time": "2025-04-04 04:15:49",
+            "retry_delay": 300,
+            "buffer_size": 1024,
+            "file_duration": 2,
+            "remote_prefix": "Kopri",
+            "remote_folder": "SUBSAMPLING_DATA",
+            "remote_range": 4,
+            "data_parsing": false
+        }
+    ]
+}
