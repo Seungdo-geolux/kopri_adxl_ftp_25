@@ -42,7 +42,7 @@ class myFTP:
         try:
             self.ftp = FTP(self.ftp_host, timeout=5.0)
             self.ftp.login(user=self.ftp_user, passwd=self.ftp_password)
-            self.ftp.set_pasv(True)
+            self.ftp.set_pasv(False)
             self.logger.debug(f"{self.ftp_host} Connected")
         except Exception as err:
             self.logger.error(f"{self.ftp_host} Connection error: {str(err)}")

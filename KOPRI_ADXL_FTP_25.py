@@ -152,7 +152,7 @@ def ftp_task(logger, device, stop_event, error_event, config_save):
                         logger.debug(
                             f"{ftp_host}: RESET Taget_date: {formatted_restart_time}"
                         )
-                        target_date = start_time
+                        target_date = restart_time
                         config_save()
 
                         with open("filenotfound_list.pkl", "wb") as f:
