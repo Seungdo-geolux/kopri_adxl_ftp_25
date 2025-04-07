@@ -279,7 +279,7 @@ def main():
                         "remote_prefix": {"type": "string", "maxLength": 5},
                         "remote_folder": {"type": "string"},
                         "remote_range": {"type": "integer"},
-                        "data_parsing": {"type": "Boolean"},
+                        "data_parsing": {"type": "boolean"},
                     },
                     "required": [
                         "ftp_host",
