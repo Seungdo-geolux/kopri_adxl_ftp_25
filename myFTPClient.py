@@ -17,6 +17,7 @@ class myFTP:
         self.ftp_host = device["ftp_host"]
         self.ftp_user = device["ftp_user"]
         self.ftp_password = device["ftp_password"]
+        self.passive_mode = device["passive_mode"]
         self.buffer_size = device["buffer_size"]
         self.remote_folder = device["remote_folder"]
         self.remote_range = device["remote_range"]
@@ -42,7 +43,7 @@ class myFTP:
         try:
             self.ftp = FTP(self.ftp_host, timeout=5.0)
             self.ftp.login(user=self.ftp_user, passwd=self.ftp_password)
-            self.ftp.set_pasv(False)
+            self.ftp.set_pasv(self.passive_mode)
             self.logger.debug(f"{self.ftp_host} Connected")
         except Exception as err:
             self.logger.error(f"{self.ftp_host} Connection error: {str(err)}")

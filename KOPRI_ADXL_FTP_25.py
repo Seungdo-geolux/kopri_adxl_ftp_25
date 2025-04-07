@@ -3,6 +3,7 @@ import os
 import pickle
 import threading
 import time
+from xmlrpc.client import Boolean, boolean
 
 from myFTPClient import myFTP
 from mySettings import mySettings
@@ -223,9 +224,11 @@ def main():
                 "retry_delay": 300,
                 "buffer_size": 1024,
                 "file_duration": 2,
+                "passice_mode": False,
                 "remote_folder": "SUBSAMPLING_DATA",
                 "remote_prefix": "KOA",
                 "remote_range": 4,
+                "data_parsing": False,
             },
             {
                 "ftp_host": "192.168.0.201",
@@ -236,9 +239,11 @@ def main():
                 "retry_delay": 300,
                 "buffer_size": 1024,
                 "file_duration": 2,
+                "passice_mode": False,
                 "remote_folder": "SUBSAMPLING_DATA",
                 "remote_prefix": "KOB",
                 "remote_range": 4,
+                "data_parsing": False,
             },
         ],
     }
@@ -270,9 +275,11 @@ def main():
                         "retry_delay": {"type": "integer"},
                         "buffer_size": {"type": "integer"},
                         "file_duration": {"type": "integer"},
+                        "passive_mode": {"type": "boolean"},
                         "remote_prefix": {"type": "string", "maxLength": 5},
                         "remote_folder": {"type": "string"},
                         "remote_range": {"type": "integer"},
+                        "data_parsing": {"type": "Boolean"},
                     },
                     "required": [
                         "ftp_host",
@@ -283,6 +290,7 @@ def main():
                         "retry_delay",
                         "buffer_size",
                         "file_duration",
+                        "passive_mode",
                         "remote_prefix",
                         "remote_folder",
                         "remote_range",
