@@ -13,7 +13,7 @@ def test():
         True,
     ]:
         logger.info(f"TEST  {pasv_mode=} -----")
-        ftp = FTP("192.168.0.201", timeout=15.0)
+        ftp = FTP("192.168.0.200", timeout=15.0)
 
         try:
             ftp.login(user="Kopri", passwd="KopriW5500")
@@ -131,7 +131,7 @@ def test():
 
 
 def main():
-    for i in range(3):
+    for i in range(1):
         print(f"TEST Try {i+1}")
         test()
         logger.info(f"--------- {i+1}th TEST Complete")
@@ -141,5 +141,5 @@ def main():
 if __name__ == "__main__":
     import sys
 
-    logger.configure(handlers=[{"sink": sys.stdout, "level": "WARNING"}])
+    logger.configure(handlers=[{"sink": sys.stdout, "level": "DEBUG"}])
     main()

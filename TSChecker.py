@@ -26,7 +26,7 @@ def extract_time(filename):
 
 # CSV 파일들이 저장된 폴더 경로
 folder_base = r"C:\myWork\python\kopri_adxl_ftp_25\Saved_Data_KOA"
-folder_date = "20250416"
+folder_date = "20250421"
 folder_path = os.path.join(folder_base, folder_date)
 file_pattern = os.path.join(folder_path, "*_20.csv")
 csv_files = sorted(glob.glob(file_pattern))
